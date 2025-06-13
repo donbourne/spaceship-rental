@@ -2,6 +2,6 @@ package com.demo;
 
 import java.util.List;
 
-record Spaceship(String name, int maxPassangers, boolean hasCargoBay, List<String> allowedDestinations) {
+record Spaceship(String name, int maxPassengers, boolean hasCargoBay, List<String> allowedDestinations) {
     
 }

@@ -37,7 +37,7 @@ public class Fleet {
      */
     public static List<Spaceship> findCompatibleSpaceships(SpaceshipQuery userQuery) {
         return getSpaceships().stream()
-                .filter(spaceship -> spaceship.maxPassangers() >= userQuery.passangers())
+                .filter(spaceship -> spaceship.maxPassengers() >= userQuery.passengers())
                 .filter(spaceship -> (userQuery.hasCargo() && spaceship.hasCargoBay()) || !userQuery.hasCargo())
                 .filter(spaceship -> spaceship.allowedDestinations().containsAll(userQuery.destinations()))
                 .collect(Collectors.toList());
